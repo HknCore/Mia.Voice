@@ -1,0 +1,6 @@
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\bin\Debug\Mia.Voice.dll
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\bin\Debug\Mia.Voice.pdb
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\obj\Debug\Mia.Voice.csprojResolveAssemblyReference.cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\obj\Debug\Mia.Voice.csproj.CoreCompileInputs.cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\obj\Debug\Mia.Voice.dll
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice\obj\Debug\Mia.Voice.pdb

@@ -1,0 +1,17 @@
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.exe.config
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.exe
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.pdb
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.dll
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.pdb
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.csprojResolveAssemblyReference.cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\MainWindow.g.cs
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\App.g.cs
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App_MarkupCompile.cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App_MarkupCompile.lref
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\MainWindow.baml
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.g.resources
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.Properties.Resources.resources
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.csproj.GenerateResource.Cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.csproj.CoreCompileInputs.cache
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.exe
+D:\Projekte\Mia.Systems\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.pdb
