@@ -33,6 +33,7 @@ namespace Mia.Voice.App
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
 
+
             VoiceListenerParameters parameters = new VoiceListenerParameters();
 
             parameters.Terms = new List<VoiceTerm>()
