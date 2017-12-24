@@ -11,5 +11,7 @@ namespace Mia.Voice
         public TermType Type { get; set; }
 
         public string Value { get; set; }
+
+        
     }
 }

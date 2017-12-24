@@ -32,23 +32,18 @@ namespace Mia.Voice.App
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-
-
             VoiceListenerParameters parameters = new VoiceListenerParameters();
 
             parameters.Terms = new List<VoiceTerm>()
             {
                 new VoiceTerm() { Type = TermType.Command, Value = "OK" },
-                new VoiceTerm() { Type = TermType.Number, Value = "1" },
+                new VoiceTerm() { Type = TermType.Number, Value = "Eins" },
                 new VoiceTerm() { Type = TermType.Number, Value = "2" },
-                new VoiceTerm() { Type = TermType.Text, Value = "ABC" },
+                new VoiceTerm() { Type = TermType.Text, Value = "Einlagern" },
             };
 
-            parameters.Tolerance = 50;
-
+            //parameters.Tolerance = 50;
             listener.Initialize(parameters);
-
-
             listener.TermReceived += Listener_TermReceived;
 
 
