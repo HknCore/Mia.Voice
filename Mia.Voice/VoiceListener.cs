@@ -10,6 +10,7 @@ using Microsoft.Speech.Recognition;
 using Microsoft.Speech;
 using System.Globalization;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Mia.Voice
 {
@@ -19,7 +20,6 @@ namespace Mia.Voice
         static CultureInfo ci = new CultureInfo("de-DE");
         static SpeechRecognitionEngine sre = new SpeechRecognitionEngine(ci);
         public VoiceListenerParameters parameters = new VoiceListenerParameters();
-        private bool Listener = false;
 
         public void Initialize(VoiceListenerParameters parameters)
         {
@@ -33,16 +33,7 @@ namespace Mia.Voice
 
         public void StartListening()
         {
-            Listener = true;
-
-            // Dummy
-            if (Listener == true)
-            {
-                sre.RecognizeAsync(RecognizeMode.Multiple);
-            } else
-            {
-                StopListening();
-            }
+         sre.RecognizeAsync(RecognizeMode.Multiple);
         }
 
 
@@ -60,11 +51,9 @@ namespace Mia.Voice
             float conf = e.Result.Confidence;
             if (conf < 0.65) return;
 
+            
+           System.Diagnostics.Debug.WriteLine(txt);
 
-            if (parameters.Terms.ToString().Contains(txt)){
-                System.Diagnostics.Debug.WriteLine(txt);
-
-            }
 
         }
 
@@ -84,19 +73,14 @@ namespace Mia.Voice
         static Grammar GetGrammar(VoiceListenerParameters parameters)
         {
             VoiceTerm example = new VoiceTerm();
-
             Choices ch_Dict = new Choices();
-
-            foreach (var Value in parameters.Terms)
+            foreach (VoiceTerm Value in parameters.Terms)
             {
-                System.Diagnostics.Debug.WriteLine(example.GetType());
-                ch_Dict.Add(Value.ToString());
+                String vartest = Value.Value;
+                Debug.WriteLine(vartest);
+                ch_Dict.Add(Value.Value);
                 //ch_Dict.Add(example.Value);
             }
-
-
-            
-
             GrammarBuilder gb_result =
             new GrammarBuilder(ch_Dict);
             Grammar g_result = new Grammar(gb_result);
