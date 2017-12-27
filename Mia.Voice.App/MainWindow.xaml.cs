@@ -37,7 +37,8 @@ namespace Mia.Voice.App
             parameters.Terms = new List<VoiceTerm>()
             {
                 new VoiceTerm() { Type = TermType.Command, Value = "OK" },
-                new VoiceTerm() { Type = TermType.Number, Value = "Eins" },
+                new VoiceTerm() { Type = TermType.Number, Value ="eins" },
+                new VoiceTerm() { Type = TermType.Number, Value ="zwei" },
                 new VoiceTerm() { Type = TermType.Number, Value = "2" },
                 new VoiceTerm() { Type = TermType.Text, Value = "Einlagern" },
             };
