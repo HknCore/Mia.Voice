@@ -16,11 +16,14 @@ namespace Mia.Voice
 {
     public class VoiceListener
     {
-        
+
         static CultureInfo ci = new CultureInfo("de-DE");
         static SpeechRecognitionEngine sre = new SpeechRecognitionEngine(ci);
         public VoiceListenerParameters parameters = new VoiceListenerParameters();
+        public List<Tuple<TermType, String>> ListType;
         public Dictionary<string, int> textNumber;
+        private float RealTolerance;
+        TermType type;
 
         public void Initialize(VoiceListenerParameters parameters)
         {
@@ -28,15 +31,15 @@ namespace Mia.Voice
             Numbers();
             sre.SpeechRecognized += SomethingHeard;
             Grammar g_HelloGoodbye = GetGrammar(parameters);
-            //Grammar g_stckZ = GetNumbers(parameters);
             sre.LoadGrammarAsync(g_HelloGoodbye);
-            //sre.RecognizeAsync(RecognizeMode.Multiple);
-        }
+            GetTolerance(parameters);
 
+
+        }
 
         public void StartListening()
         {
-         sre.RecognizeAsync(RecognizeMode.Multiple);
+            sre.RecognizeAsync(RecognizeMode.Multiple);
         }
 
 
@@ -49,17 +52,26 @@ namespace Mia.Voice
         private void SomethingHeard(object sender,
           SpeechRecognizedEventArgs e)
         {
-            this.RaiseTermReceived(new VoiceTerm() { Type = TermType.Command, Value = "OK" });
             string txt = e.Result.Text;
             float conf = e.Result.Confidence;
-            if (conf < 0.65) return;
+            if (conf < RealTolerance) return;
 
+            foreach (var lst in ListType)
+            {
+
+                if (lst.Item2.Equals(txt))
+                {
+                    type = lst.Item1;             
+                }
+            }
             
-           System.Diagnostics.Debug.WriteLine(txt);
+            this.RaiseTermReceived(new VoiceTerm() { Type = type, Value = txt });
+
+            //System.Diagnostics.Debug.WriteLine(type);
+            //System.Diagnostics.Debug.WriteLine(txt);
+
         }
-
-
-
+          
         public void Numbers()
         {
             textNumber = new Dictionary<string, int>();
@@ -175,32 +187,41 @@ namespace Mia.Voice
         }
 
 
-
         public Grammar GetGrammar(VoiceListenerParameters parameters)
         {
+
+            ListType = new List<Tuple<TermType, String>>();
             Choices ch_Dict = new Choices();
+
             foreach (VoiceTerm Value in parameters.Terms)
             {
-                string vartest = Value.Value;
+                string testterm = Value.Value;
                 int ValueS;
 
-                if (textNumber.ContainsKey(vartest))
+                if (textNumber.ContainsKey(testterm))
                 {
-                        int value = textNumber[vartest];
-                        ValueS = value;
-                        //Debug.WriteLine(ValueS);
-                        ch_Dict.Add(ValueS.ToString());
-                    }
-                
+                    int value = textNumber[testterm];
+                    ValueS = value;
+                    ch_Dict.Add(ValueS.ToString());
+
+                }
+
                 else
                 {
-                    //Debug.WriteLine(vartest);
                     ch_Dict.Add(Value.Value);
-                }                
+                }
+
+                ListType.Add(Tuple.Create(Value.Type, testterm));
             }
             GrammarBuilder gb_result = new GrammarBuilder(ch_Dict);
             Grammar g_result = new Grammar(gb_result);
             return g_result;
         }
+
+        private void GetTolerance(VoiceListenerParameters parameters)
+        {
+            RealTolerance = parameters.Tolerance / 100;
+        }
+
     }
 }

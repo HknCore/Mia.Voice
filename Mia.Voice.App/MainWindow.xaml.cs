@@ -38,12 +38,12 @@ namespace Mia.Voice.App
             {
                 new VoiceTerm() { Type = TermType.Command, Value = "OK" },
                 new VoiceTerm() { Type = TermType.Number, Value ="eins" },
-                new VoiceTerm() { Type = TermType.Number, Value ="zwei" },
-                new VoiceTerm() { Type = TermType.Number, Value = "2" },
+                new VoiceTerm() { Type = TermType.Number, Value ="1" },
+                new VoiceTerm() { Type = TermType.Number, Value ="2" }, 
                 new VoiceTerm() { Type = TermType.Text, Value = "Einlagern" },
             };
 
-            //parameters.Tolerance = 50;
+            parameters.Tolerance = 65;  //1-100
             listener.Initialize(parameters);
             listener.TermReceived += Listener_TermReceived;
 

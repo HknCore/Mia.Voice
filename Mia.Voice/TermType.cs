@@ -12,7 +12,8 @@ namespace Mia.Voice
 
         Number,
 
+        Text,
 
-        Text
+        
     }
 }
