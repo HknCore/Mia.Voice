@@ -1,0 +1,4 @@
+2018-01-03 00:02:19.9151|INFO|Mia.Voice.VoiceListener|Program started..
+2018-01-03 00:02:22.8324|INFO|Mia.Voice.VoiceListener|Listening... You said:"1|Number"
+2018-01-03 00:02:24.4723|INFO|Mia.Voice.VoiceListener|Listening... You said:"Einlagern|Command"
+2018-01-03 00:02:25.5204|INFO|Mia.Voice.VoiceListener|Listening... You said:"OK|Command"

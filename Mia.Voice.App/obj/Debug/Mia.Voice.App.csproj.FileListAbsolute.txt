@@ -33,8 +33,6 @@ D:\Mia.Voice\Mia.Voice.App\obj\Debug\Mia.Voice.App.g.resources
 D:\Mia.Voice\Mia.Voice.App\obj\Debug\Mia.Voice.App.Properties.Resources.resources
 D:\Mia.Voice\Mia.Voice.App\obj\Debug\Mia.Voice.App.csproj.GenerateResource.Cache
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.exe.config
-C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.exe
-C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.pdb
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.exe
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.App.pdb
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\Mia.Voice.dll
@@ -49,3 +47,8 @@ C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\MainWind
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.g.resources
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.Properties.Resources.resources
 C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.csproj.GenerateResource.Cache
+C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.exe
+C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\obj\Debug\Mia.Voice.App.pdb
+C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\NLog.config
+C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\NLog.dll
+C:\Users\Oguzhan\Documents\GitHub\Mia.Voice.App\Mia.Voice.App\bin\Debug\NLog.xml

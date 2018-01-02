@@ -33,14 +33,11 @@ namespace Mia.Voice.App
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             VoiceListenerParameters parameters = new VoiceListenerParameters();
-
             parameters.Terms = new List<VoiceTerm>()
             {
                 new VoiceTerm() { Type = TermType.Command, Value = "OK" },
-                new VoiceTerm() { Type = TermType.Number, Value ="eins" },
-                new VoiceTerm() { Type = TermType.Number, Value ="1" },
-                new VoiceTerm() { Type = TermType.Number, Value ="2" }, 
-                new VoiceTerm() { Type = TermType.Text, Value = "Einlagern" },
+                new VoiceTerm() { Type = TermType.Number, Value = "Range" },
+                new VoiceTerm() { Type = TermType.Command, Value = "Einlagern" },
             };
 
             parameters.Tolerance = 65;  //1-100
@@ -57,6 +54,11 @@ namespace Mia.Voice.App
             if (term.Type == TermType.Command)
             {
                 //...
+            }
+
+            if (term.Type == TermType.Text)
+            {
+                System.Diagnostics.Debug.WriteLine(term.Value);
             }
         }
 
